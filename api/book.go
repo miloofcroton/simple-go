@@ -1,6 +1,9 @@
 package api
 
-import "net/http"
+import (
+	"encoding/json"
+	"net/http"
+)
 
 // Book type with Name, Author and ISBN
 type Book struct {
@@ -11,7 +14,11 @@ type Book struct {
 
 // ToJSON to be used for marshalling of Book type
 func (b Book) ToJSON() []byte {
-	return nil
+	ToJSON, err := json.Marshal(b)
+	if err != nil {
+		panic(err)
+	}
+	return ToJSON
 }
 
 // FromJSON to be used for unmarshalling of Book type
