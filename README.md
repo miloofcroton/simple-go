@@ -23,6 +23,8 @@ docker-compose build
 
 ### push
 
+(not necessary with docker-compose)
+
 ```shell
 docker push miloofcroton/simple-go:1.0.2
 ```
@@ -38,3 +40,19 @@ docker run \
     -p 9090:9090 \
     simple-go:1.0.1
 ```
+
+or
+
+```shell
+docker-compose up
+```
+
+
+## the k8s way
+
+### start k8s
+
+```
+minikube start
+```
+

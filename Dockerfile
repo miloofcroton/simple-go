@@ -1,12 +1,11 @@
-FROM golang:1.7.3-alpine
+FROM alpine:3.5
+LABEL maintainer="Jack Toumey"
 
-ENV SOURCES /go/src/github.com/miloofcroton/simple-go/
+COPY ./simple-go /app/simple-go
 
-COPY . ${SOURCES}
-
-RUN cd ${SOURCES} && CGO_ENABLED=0 go install -a
+RUN chmod +x /app/simple-go
 
 ENV PORT 8080
 EXPOSE 8080
 
-ENTRYPOINT simple-go
+ENTRYPOINT /app/simple-go
