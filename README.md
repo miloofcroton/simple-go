@@ -15,6 +15,12 @@ GOOS=linux GOARCH=amd64 go build
 docker build -t miloofcroton/simple-go:1.0.2 -f Dockerfile-v2 .
 ```
 
+or
+
+```shell
+docker-compose build
+```
+
 ### push
 
 ```shell

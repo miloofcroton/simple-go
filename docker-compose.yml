@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    build: .
+    image: miloofcroton/simple-go:1.0.2
+    environment:
+      - PORT=9090
+    ports:
+      - "9090:9090"
+
