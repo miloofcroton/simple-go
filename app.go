@@ -5,7 +5,6 @@ import (
 	"net/http"
 	"os"
 
-	// run: `go get github.com/miloofcroton/simple-go/api`
 	"github.com/miloofcroton/simple-go/api"
 )
 
@@ -24,8 +23,7 @@ func port() string {
 		port = "8080"
 	}
 
-	// adding localhost to avoid getting the MacOS firewall notification
-	return "localhost:" + port
+	return ":" + port
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
