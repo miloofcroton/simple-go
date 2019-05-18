@@ -3,9 +3,9 @@ services:
   app:
     # build: .
     build:
-      dockerfile: Dockerfile.v2
+      dockerfile: Dockerfile-v2
       context: .
-    image: miloofcroton/simple-go:1.0.2
+    image: miloofcroton/simple-go:1.0.3
     environment:
       - PORT=9090
     ports:
