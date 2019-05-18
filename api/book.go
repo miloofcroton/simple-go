@@ -31,6 +31,16 @@ func FromJSON(data []byte) Book {
 	return book
 }
 
-func BookHandleFunc(w http.ResponseWriter, r *http.Request) {
+var Books = []Book{
+	Book{Title: "Adventures of Huckleberry Finn", Author: "Mark Twain", ISBN: "12354321"},
+	Book{Title: "Adventures of Tom Sawyer", Author: "Mark Twain", ISBN: "23412521"},
+}
 
+func BooksHandleFunc(w http.ResponseWriter, r *http.Request) {
+	b, err := json.Marshal(Books)
+	if err != nil {
+		panic(err)
+	}
+	w.Header().Add("Content-Type", "application/json; charset=utf-8")
+	w.Write(b)
 }

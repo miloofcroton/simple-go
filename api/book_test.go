@@ -3,6 +3,7 @@ package api
 import (
 	"testing"
 
+	// run: `go get github.com/stretchr/testify/assert`
 	"github.com/stretchr/testify/assert"
 )
 

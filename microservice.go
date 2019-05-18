@@ -4,11 +4,15 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+
+	// run: `go get github.com/miloofcroton/simple-go/api`
+	"github.com/miloofcroton/simple-go/api"
 )
 
 func main() {
 	http.HandleFunc("/", index)
 	http.HandleFunc("/api/echo", echo)
+	http.HandleFunc("/api/books", api.BooksHandleFunc)
 	http.ListenAndServe(port(), nil)
 }
 
