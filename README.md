@@ -48,7 +48,7 @@ docker-compose up
 ```
 
 
-## the k8s way
+## the k8s way, locally
 
 ### start k8s
 
