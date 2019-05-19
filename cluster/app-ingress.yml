@@ -1,0 +1,11 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: simple-go
+  labels:
+    app: simple-go
+    tier: frontend
+spec:
+  backend:
+    serviceName: simple-go
+    servicePort: 8080
