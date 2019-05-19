@@ -72,6 +72,10 @@ kubectl create -f cluster/app-pod.yml --namespace simple-go
 kubectl create -f cluster/app-namespace.yml
 ```
 
+```shell
+kubectl apply -f cluster
+```
+
 ### forward a port
 
 ```shell
@@ -82,6 +86,10 @@ kubectl port-forward simple-go-pod 8080:8080
 
 ```shell
 kubectl get pods
+```
+
+```shell
+kubectl get pods -w
 ```
 
 ```shell
@@ -124,3 +132,30 @@ kubectl delete pod simple-go-pod
 kubectl delete -f cluster/app-namespace.yml
 ```
 
+```shell
+kubectl delete -f cluster
+```
+
+### scale
+
+```shell
+kubectl scale deployment simple-go --replicas=5
+```
+
+### check history
+
+```shell
+kubectl rollout history deployment simple-go
+```
+
+### update images
+
+```shell
+kubectl set image deployment simple-go simple-go=miloofcroton/simple-go:1.0.4
+```
+
+### undo image update
+
+```shell
+kubectl rollout undo deployment simple-go
+```

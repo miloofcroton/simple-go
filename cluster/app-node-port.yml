@@ -8,6 +8,6 @@ spec:
   # use NodePort here to be able to access the port on each node
   type: NodePort
   ports:
-  - port: 8080
+    - port: 8080
   selector:
     app: simple-go

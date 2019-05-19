@@ -7,12 +7,12 @@ metadata:
     env: test
 spec:
   containers:
-  - name: simple-go
-    image: miloofcroton/simple-go:1.0.3
-    resources:
-      limits:
-        memory: "128Mi"
-        cpu: "500m"
-    ports:
-      - containerPort: 8080
-        protocol: TCP
+    - name: simple-go
+      image: miloofcroton/simple-go:1.0.3
+      resources:
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
+      ports:
+        - containerPort: 8080
+          protocol: TCP
