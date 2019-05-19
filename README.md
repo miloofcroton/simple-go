@@ -85,6 +85,10 @@ kubectl get pods
 ```
 
 ```shell
+kubectl get pods,deployments,ns
+```
+
+```shell
 kubectl get pods --show-labels
 ```
 
