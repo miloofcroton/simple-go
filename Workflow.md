@@ -2,6 +2,7 @@
 == Building the Go microservices
 
 ```shell
+go get -d ./...
 go build
 ./Simple-go.exe
 ```
